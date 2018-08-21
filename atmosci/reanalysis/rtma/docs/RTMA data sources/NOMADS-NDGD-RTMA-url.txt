@@ -1,0 +1,7 @@
+NOMADS url for getting NDGD (RTMA) data files
+
+https://nomads.ncdc.noaa.gov/data/ndgd/'month'/'date'/
+
+month exmple: 201803
+ date exmple: 20180324
+

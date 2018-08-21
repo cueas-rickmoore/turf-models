@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.pyc
+*.pyo
+*.so
+*.o
+*.rev
+*.swp
+*.*~

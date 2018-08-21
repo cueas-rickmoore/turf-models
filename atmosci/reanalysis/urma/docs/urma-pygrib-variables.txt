@@ -1,0 +1,40 @@
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+URMA 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+urma.YYYYMMDDHHz.data.grb2
+
+messages = gribs.read()
+yields 13 messages
+
+str(messages[i]) 
+format >> N:name:units (stepType):projection:typeOfLevel:level num <units>:fcst time num hrs: 
+
+1:Orography:m (instant):lambert:surface:level 0:fcst time 0 hrs:from YYYYMMDDHHmm
+2:Surface pressure:Pa (instant):lambert:surface:level 0:fcst time 0 hrs:from YYYYMMDDHHmm
+3:2 metre temperature:K (instant):lambert:heightAboveGround:level 2 m:fcst time 0 hrs:from YYYYMMDDHHmm
+4:2 metre dewpoint temperature:K (instant):lambert:heightAboveGround:level 2 m:fcst time 0 hrs:from YYYYMMDDHHmm
+5:10 metre U wind component:m s**-1 (instant):lambert:heightAboveGround:level 10 m:fcst time 0 hrs:from YYYYMMDDHHmm
+6:10 metre V wind component:m s**-1 (instant):lambert:heightAboveGround:level 10 m:fcst time 0 hrs:from YYYYMMDDHHmm
+7:Specific humidity:kg kg**-1 (instant):lambert:heightAboveGround:level 2 m:fcst time 0 hrs:from YYYYMMDDHHmm
+8:Wind direction [from which blowing]:deg true (instant):lambert:heightAboveGround:level 10 m:fcst time 0 hrs:from YYYYMMDDHHmm
+9:10 metre wind speed:m s**-1 (instant):lambert:heightAboveGround:level 10 m:fcst time 0 hrs:from YYYYMMDDHHmm
+10:Wind speed (gust):m s**-1 (instant):lambert:heightAboveGround:level 10 m:fcst time 0 hrs:from YYYYMMDDHHmm
+11:Visibility:m (instant):lambert:surface:level 0:fcst time 0 hrs:from YYYYMMDDHHmm
+12:Ceiling:m (instant):lambert:unknown:level 0 215:fcst time 0 hrs:from YYYYMMDDHHmm
+13:Total Cloud Cover:% (instant):lambert:unknown:level 0 200:fcst time 0 hrs:from YYYYMMDDHHmm
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+urma.YYYYMMDDHHz.data.grb2
+
+messages = gribs.read()
+yields 1 message
+format >> N : name : units (stepType) : projection : typeOfLevel : level : fcast time span : fcast start time
+1:Total Precipitation:kg m**-2 (accum):lambert:surface:level 0:fcst time 0-6 hrs (accum):from YYYYMMDDHHmm
+
+
+

@@ -1,0 +1,330 @@
+URMA from NCEP server
+
+http: http://www.ftp.ncep.noaa.gov/data/nccf/com/urma/prod/urma2p5.YYYMMDD/
+ftp: ftp://ftp.ncep.noaa.gov/pub/data/nccf/com/urma/prod/urma2p5.YYYMMDD/
+
+filenames : * all data except precip
+            urma2p5.t[HH]z.2dvaranl_ndfd.grb2 \
+            urma2p5.t[HH]z.2dvarerr_ndfd.grb2  > (2145 x 1377)
+            urma2p5.t[HH]z.2dvarges_ndfd.grb2 /
+
+            urma2p5.t[HH]z.2dvaranl_nwrfc.grb2 \
+            urma2p5.t[HH]z.2dvarerr_nwrfc.grb2  > (709 x 795 grid nodes)
+            urma2p5.t[HH]z.2dvarges_nwrfc.grb2 /
+
+            * precip only - every hour
+            urma2p5.[YYYYMMDDHH].pcp_06h.184.grb2 (2145 x 1377)
+            * precip only - every 6 hours (00, 06, 12, 18)
+            urma2p5.[YYYYMMDDHH].pcp_06h.188.grb2 (709 x 795) 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+variables for hourly files (both ndfd & nwrfc)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Variable "Ceiling_cloud_ceiling"
+float Ceiling_cloud_ceiling(time=1, y=1377, x=2145);
+  :long_name = "Ceiling @ Cloud ceiling";
+  :units = "m";
+  :abbreviation = "CEIL";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Variable_Id = "VAR_0-6-13_L215";
+  :Grib2_Parameter = 0, 6, 13; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Cloud";
+  :Grib2_Parameter_Name = "Ceiling";
+  :Grib2_Level_Type = "Cloud ceiling";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Dewpoint_temperature_height_above_ground"
+float Dewpoint_temperature_height_above_ground(time=1, height_above_ground=1,
+      y=1377, x=2145);
+  :long_name = "Dewpoint temperature @ Specified height level above ground";
+  :units = "K";
+  :abbreviation = "DPT";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground y x ";
+  :Grib_Variable_Id = "VAR_0-0-6_L103";
+  :Grib2_Parameter = 0, 0, 6; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Temperature";
+  :Grib2_Parameter_Name = "Dewpoint temperature";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Geopotential_height_surface"
+float Geopotential_height_surface(time=1, y=1377, x=2145);
+  :long_name = "Geopotential height @ Ground or water surface";
+  :units = "gpm";
+  :abbreviation = "HGT";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Variable_Id = "VAR_0-3-5_L1";
+  :Grib2_Parameter = 0, 3, 5; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Mass";
+  :Grib2_Parameter_Name = "Geopotential height";
+  :Grib2_Level_Type = "Ground or water surface";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Pressure_surface"
+float Pressure_surface(time=1, y=1377, x=2145);
+  :long_name = "Pressure @ Ground or water surface";
+  :units = "Pa";
+  :abbreviation = "PRES";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Variable_Id = "VAR_0-3-0_L1";
+  :Grib2_Parameter = 0, 3, 0; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Mass";
+  :Grib2_Parameter_Name = "Pressure";
+  :Grib2_Level_Type = "Ground or water surface";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+ 
+Variable "Specific_humidity_height_above_ground"
+float Specific_humidity_height_above_ground(time=1, height_above_ground=1,
+      y=1377, x=2145);
+  :long_name = "Specific humidity @ Specified height level above ground";
+  :units = "kg/kg";
+  :abbreviation = "SPFH";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground y x ";
+  :Grib_Variable_Id = "VAR_0-1-0_L103";
+  :Grib2_Parameter = 0, 1, 0; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Moisture";
+  :Grib2_Parameter_Name = "Specific humidity";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+ 
+ 
+Variable "Temperature_height_above_ground"
+float Temperature_height_above_ground(time=1, height_above_ground=1,
+      y=1377, x=2145);
+  :long_name = "Temperature @ Specified height level above ground";
+  :units = "K";
+  :abbreviation = "TMP";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground y x ";
+  :Grib_Variable_Id = "VAR_0-0-0_L103";
+  :Grib2_Parameter = 0, 0, 0; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Temperature";
+  :Grib2_Parameter_Name = "Temperature";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis"; 
+ 
+
+Variable "Total_cloud_cover_entire_atmosphere_single_layer"
+float Total_cloud_cover_entire_atmosphere_single_layer(time=1, y=1377, x=2145);
+  :long_name = "Total cloud cover @ Entire atmosphere layer";
+  :units = "%";
+  :abbreviation = "TCDC";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Variable_Id = "VAR_0-6-1_L200";
+  :Grib2_Parameter = 0, 6, 1; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Cloud";
+  :Grib2_Parameter_Name = "Total cloud cover";
+  :Grib2_Level_Type = "Entire atmosphere layer";
+  :Grib2_Generating_Process_Type = "Analysis"; 
+ 
+
+Variable "u-component_of_wind_height_above_ground"
+float u-component_of_wind_height_above_ground(time=1, height_above_ground1=1,
+      y=1377, x=2145);
+  :long_name = "u-component of wind @ Specified height level above ground";
+  :units = "m/s";
+  :abbreviation = "UGRD";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground1 y x ";
+  :Grib_Variable_Id = "VAR_0-2-2_L103";
+  :Grib2_Parameter = 0, 2, 2; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Momentum";
+  :Grib2_Parameter_Name = "u-component of wind";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "v-component_of_wind_height_above_ground"
+float v-component_of_wind_height_above_ground(time=1, height_above_ground1=1,
+      y=1377, x=2145);
+  :long_name = "v-component of wind @ Specified height level above ground";
+  :units = "m/s";
+  :abbreviation = "VGRD";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground1 y x ";
+  :Grib_Variable_Id = "VAR_0-2-3_L103";
+  :Grib2_Parameter = 0, 2, 3; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Momentum";
+  :Grib2_Parameter_Name = "v-component of wind";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Visibility_surface"
+float Visibility_surface(time=1, y=1377, x=2145);
+  :long_name = "Visibility @ Ground or water surface";
+  :units = "m";
+  :abbreviation = "VIS";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Variable_Id = "VAR_0-19-0_L1";
+  :Grib2_Parameter = 0, 19, 0; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Physical atmospheric Properties";
+  :Grib2_Parameter_Name = "Visibility";
+  :Grib2_Level_Type = "Ground or water surface";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Wind_direction_from_which_blowing_height_above_ground"
+float Wind_direction_from_which_blowing_height_above_ground(time=1,
+      height_above_ground1=1, y=1377, x=2145);
+  :long_name = "Wind direction (from which blowing) @ Specified height
+                level above ground";
+  :units = "degree_true";
+  :abbreviation = "WDIR";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground1 y x ";
+  :Grib_Variable_Id = "VAR_0-2-0_L103";
+  :Grib2_Parameter = 0, 2, 0; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Momentum";
+  :Grib2_Parameter_Name = "Wind direction (from which blowing)";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Wind_speed_gust_height_above_ground"
+float Wind_speed_gust_height_above_ground(time=1, height_above_ground1=1,
+      y=1377, x=2145);
+  :long_name = "Wind speed (gust) @ Specified height level above ground";
+  :units = "m/s";
+  :abbreviation = "GUST";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground1 y x ";
+  :Grib_Variable_Id = "VAR_0-2-22_L103";
+  :Grib2_Parameter = 0, 2, 22; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Momentum";
+  :Grib2_Parameter_Name = "Wind speed (gust)";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "Wind_speed_height_above_ground"
+float Wind_speed_height_above_ground(time=1, height_above_ground1=1,
+      y=1377, x=2145);
+  :long_name = "Wind speed @ Specified height level above ground";
+  :units = "m/s";
+  :abbreviation = "WIND";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time height_above_ground1 y x ";
+  :Grib_Variable_Id = "VAR_0-2-1_L103";
+  :Grib2_Parameter = 0, 2, 1; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Momentum";
+  :Grib2_Parameter_Name = "Wind speed";
+  :Grib2_Level_Type = "Specified height level above ground";
+  :Grib2_Generating_Process_Type = "Analysis";
+
+
+Variable "height_above_ground" (2 meters)
+float height_above_ground(height_above_ground=1);
+  :units = "m";
+  :long_name = "Specified height level above ground";
+  :positive = "up";
+  :Grib_level_type = 103; // int
+  :datum = "ground";
+
+Variable "height_above_ground1" (10 meters)
+float height_above_ground1(height_above_ground1=1);
+  :units = "m";
+  :long_name = "Specified height level above ground";
+  :positive = "up";
+  :Grib_level_type = 103; // int
+  :datum = "ground";
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+PRECIP file
+
+1 file per hour
+
+Variable "Total_precipitation_surface_1_Hour_Accumulation"
+float Total_precipitation_surface_1_Hour_Accumulation(time=1, y=1377, x=2145);
+  :long_name = "Total precipitation (1_Hour Accumulation) @ Ground or
+                water surface";
+  :units = "kg.m-2";
+  :abbreviation = "APCP";
+  :missing_value = NaNf; // float
+  :grid_mapping = "LambertConformal_Projection";
+  :coordinates = "reftime time y x ";
+  :Grib_Statistical_Interval_Type = "Accumulation";
+  :Grib_Variable_Id = "VAR_0-1-8_L1_I1_Hour_S1";
+  :Grib2_Parameter = 0, 1, 8; // int
+  :Grib2_Parameter_Discipline = "Meteorological products";
+  :Grib2_Parameter_Category = "Moisture";
+  :Grib2_Parameter_Name = "Total precipitation";
+  :Grib2_Level_Type = "Ground or water surface";
+  :Grib2_Generating_Process_Type = "Forecast";
+
+Variable "time_bounds"
+double time_bounds(time=1, 2);
+  :units = "Hour since 2017-05-22T23:00:00Z";
+  :long_name = "bounds for time";
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+common to all files
+
+Variable "reftime"
+double reftime;
+  :units = "Hour since 2017-05-22T23:00:00Z";
+  :standard_name = "forecast_reference_time";
+  :long_name = "GRIB reference time";
+  :calendar = "proleptic_gregorian";
+
+Variable "time"
+ double time(time=1);
+  :units = "Hour since 2017-05-22T23:00:00Z";
+  :standard_name = "time";
+  :long_name = "GRIB forecast or observation time";
+  :calendar = "proleptic_gregorian";
+  :bounds = "time_bounds";
+
+Variable "x"
+float x(x=2145);
+  :standard_name = "projection_x_coordinate";
+  :units = "km";
+
+Variable "y"
+float y(y=1377);
+  :standard_name = "projection_y_coordinate";
+  :units = "km";
+

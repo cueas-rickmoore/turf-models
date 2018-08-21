@@ -1,0 +1,39 @@
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+URMA 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+urma.YYYYMMDDHHz.data.grb2
+
+wgrib2 urma.YYYYMMDDHHz.data.grb2
+yields 13 messages
+
+format >> msg : byte location of msg, startng at 0 : time : short name : level : description
+
+1:0:d=2017061100:HGT:surface:anl:
+2:5907518:d=2017061100:PRES:surface:anl:
+3:11815036:d=2017061100:TMP:2 m above ground:anl:
+4:16614930:d=2017061100:DPT:2 m above ground:anl:
+5:21414824:d=2017061100:UGRD:10 m above ground:anl:
+6:25845510:d=2017061100:VGRD:10 m above ground:anl:
+7:30276196:d=2017061100:SPFH:2 m above ground:anl:
+8:35814506:d=2017061100:WDIR:10 m above ground:anl:
+9:40245192:d=2017061100:WIND:10 m above ground:anl:
+10:44675878:d=2017061100:GUST:10 m above ground:anl:
+11:49106564:d=2017061100:VIS:surface:anl:
+12:54644874:d=2017061100:CEIL:cloud ceiling:anl:
+13:61290809:d=2017061100:TCDC:entire atmosphere (considered as a single layer):anl:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+urma.YYYYMMDDHHz.pcp_06h.grb2
+
+wgrib2 urma.YYYYMMDDHHz.data.grb2
+yields 1 message
+
+format >> msg : byte location of msg, startng at 0 : time : short name : level : description
+
+1:0:d=2017061018:APCP:surface:0-6 hour acc fcst:
+

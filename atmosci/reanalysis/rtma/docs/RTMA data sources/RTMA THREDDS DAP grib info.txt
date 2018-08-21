@@ -1,0 +1,51 @@
+
+DAP URL
+
+RTMA data @ 2.5km resolution
+   temperatures
+   precip
+   humdity
+
+
+
+   lon : 2814 nodes : min -60.90330293916 : max -130.103387
+                      resolution 0.024600102
+   lat : 1413 nodes : min 20.196426 : max 52.7969772636    
+                      resolution 0.023088210
+
+   dpt2m :    dew point temperature @ 2 meters (degrees K)
+              32 bit real variable : dpt2m 
+              64 bit real variable : time, lat, lon
+   gust10m :  wind speed (gusts) @ 10 meters (meters/second)
+              32 bit real variable : gust10m 
+              64 bit real variable : time, lat, lon
+   hgtsfc :   surface geopotential height (gpm)
+              32 bit real variable : hgtsfc 
+              64 bit real variable : time, lat, lon
+   pressfc :  suface pressure (pa)
+              32 bit real variable : pressfc 
+              64 bit real variable : time, lat, lon
+   spfh2m :   specific humidity @ 2 meters (kg/kg)
+              32 bit real variable : spfh2m 
+              64 bit real variable : time, lat, lon
+   tcdcclm :  total cloud cover - entire atmosphere (%)
+              32 bit real variable : tcdcclm 
+              64 bit real variable : time, lat, lon
+   tmp2m :    temperature @ 2 meters (degrees K)
+              32 bit real variable : tmp2m 
+              64 bit real variable : time, lat, lon
+   ugrd10m :  wind u-component @ 10 meters (meters/second)
+              32 bit real variable : ugrd10m 
+              64 bit real variable : time, lat, lon
+   vgrd10m :  wind v-component @ 10 meters (meters/second)
+              32 bit real variable : vgrd10m 
+              64 bit real variable : time, lat, lon
+   vissfc :   surface visibility (meters)
+              32 bit real variable : vissfc 
+              64 bit real variable : time, lat, lon
+   wdir10m :  wind direction @ 10 meters (degtrue)
+              32 bit real variable : wdir10m 
+              64 bit real variable : time, lat, lon
+   wind10m :  wind speed @ 10 meters (meters/second) 
+              32 bit real variable : wind10m 
+              64 bit real variable : time, lat, lon
